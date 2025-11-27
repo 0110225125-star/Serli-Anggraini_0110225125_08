@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Hitung Luas Lingkaran</title>
+</head>
+<body>
+    <h2>Luas Lingkaran</h2>
+
+    <label>Masukkan jari-jari (r):</label>
+    <br>
+    <input type="number" id="radius"><br>
+    
+    <button type="button" onclick="hitungLuas()">Hitung</button>
+
+    <h3>Hasil:</h3>
+    <p id="hasil"></p>
+
+    <script>
+        function hitungLuas() {
+            let r = document.getElementById("radius").value;
+            let luas = Math.PI * r * r;
+
+            document.getElementById("hasil").innerText = 
+                "Luas lingkaran = " + luas.toFixed(2);
+        }
+    </script>
+</body>
+</html>

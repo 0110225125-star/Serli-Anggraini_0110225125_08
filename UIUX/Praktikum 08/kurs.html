@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Kurs Rupiah</title>
+</head>
+<body>
+    <h2>Dolar to Rupiah</h2>
+    <h3>nilai kurs rupiah = Rp 16.000</h3>
+    <label for="dolar">dolar</label>
+    <input type="number" id="dolar">
+    <br>
+    <span id="hasil1"></span>
+    <button type="button" onclick="hitung_dolar()">hitung</button>
+
+    <hr> <br>
+
+    <h2> Rupiah to Dolar</h2>
+    <h3>nilai kurs dolar = $ 1</h3>
+    <label for="rupiah">rupiah</label>
+    <input type="number" id="rupiah">
+    <br>
+    <span id="hasil2"></span>
+    <button type="button" onclick="hitung_rupiah()">hitung</button>
+
+    <script>
+    function hitung_dolar(){
+        let kurs = 16000;
+        let dolar = document.getElementById("dolar").value;
+        let rupiah = dolar* kurs;
+        document.getElementById("hasil1").innerHTML = "Hasil: Rp " + rupiah.toLocaleString();
+    }
+
+    function hitung_rupiah(){
+        let kurs = 16000;
+        let rupiah = document.getElementById("rupiah").value;
+        let dolar = rupiah / kurs;
+        document.getElementById("hasil2").innerHTML = "hasil: $ " + dolar.toFixed(2);
+    }
+</script>
+</body>
+</html>
